@@ -8,37 +8,8 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<style>
-h4{
-    text-align:center;
-    width: 100%;
-	text-align: center;
-    background-color: red;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-}
-
-/* Standard syntax */
-@keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-}
-</style>
 </head>
-<body class="bg-info" >
+<body class="bg-info" >	
 <div class="text-center">
 <h2>TIC-TAC-TOE</h2><br>
 <input type="button" id="opener" value="Instructions" class="btn btn-info" />
@@ -59,7 +30,7 @@ h4{
     <br> <div class="text-center">
 <div><h4 id="turn1">Player1 Turn</h4>
  <h4 id="turn2">Player2 Turn</h4>
- <h4 id="b1">click start to begin the game</h4>
+ <h4 id="b1">Click start to begin the Game</h4>
  <div class="text-primary">
  <h3 id="play1">player1 won the game!</h3>
  <h3 id="play2">player2 won the game!</h3>
@@ -68,10 +39,10 @@ h4{
  </div>
  </div>
 <input type="button" value="START" id="start" class="btn btn-success">
-<input type="button" value="Reset" id="reset" class="btn btn-danger">	 
+<input type="button" value="Reset" id="reset" class="btn btn-danger">	<br><br> 
 </div>
 <div id="dialog" title="Instructions">
-<h4>PLAYER1:X<br> PLAYER2:O</h4><BR>
+<h3>PLAYER1:X<br> PLAYER2:O</h3><BR>
 <P>1. The game is played on a grid that's 3 squares by 3 squares.<br>
 
 2. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.<br>
@@ -80,5 +51,6 @@ h4{
 
 4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</p>
 </div>
+<div class="text-center"><h2>TIC-TAC-TOE</h2></div>
 </body>  
 </html>

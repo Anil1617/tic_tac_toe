@@ -9,7 +9,31 @@ $(document).ready(function(){
 	  $("#turn2").hide();
 $('#start').click(function(){
 	if(play==false&&move==1){
-	 window.alert("Lets Start The Game!");
+	 $('<div><h3>Lets start the Game!</h3></div>')
+                   .dialog({ 
+				   
+                        autoOpen: true,
+        maxWidth:500,
+        maxHeight: 200,
+        width: 500,
+        height: 200,
+        modal: true,
+        buttons: {
+            "close": function() {
+                $(this).dialog("close");
+            }
+        },
+        close: function() {
+        },
+		show: {
+                effect: "slide",
+                duration: 1000
+            },
+            hide: {
+                effect: "slide",
+                duration: 1000
+            }
+                    });
 	 $("#turn1").show();
 	  $("#turn2").hide();
   play=true;
@@ -34,20 +58,90 @@ $('#start').click(function(){
       $("#turn1").hide();
 	  $("#turn2").hide();
 	  $("#play1").show();
-	setTimeout(() => alert('Player1 Wins!'), 200); 
+	$('<div><h3>Player1 Wins!</h3></div>')
+                   .dialog({ 
+				   
+                        autoOpen: true,
+        maxWidth:500,
+        maxHeight: 200,
+        width: 500,
+        height: 200,
+        modal: true,
+        buttons: {
+            "close": function() {
+                $(this).dialog("close");
+            }
+        },
+        close: function() {
+        },
+		show: {
+                effect: "explode",
+                duration: 1500
+            },
+            hide: {
+                effect: "explode",
+                duration: 1500
+            }
+                    });
 	play=false;
 	}
         else if(checkForWinner()=="O" && checkForWinner()!=-1 && checkForWinner()!="")
 			{ 
 		$("#turn1").hide();
 	  $("#turn2").hide();
-	  $("#play2").show();
-		setTimeout(() => alert('Player2 Wins!'), 200); 
+	  $("#play2").show();	$('<div><h3>Player2 Wins!</h3></div>')
+                   .dialog({ 
+				   
+                        autoOpen: true,
+        maxWidth:500,
+        maxHeight: 200,
+        width: 500,
+        height: 200,
+        modal: true,
+        buttons: {
+            "close": function() {
+                $(this).dialog("close");
+            }
+        },
+        close: function() {
+        },
+		show: {
+                effect: "explode",
+                duration: 1500
+            },
+            hide: {
+                effect: "explode",
+                duration: 1500
+            }
+                    });
 		play=false;
 		}
 	  if(move==10&&checkForWinner()==-1)
-	  {
-		 setTimeout(() => alert('Its a Draw!'), 200);
+	  {	$('<div><h3>Good Try, Its a Draw.</h3></div>')
+                   .dialog({ 
+				   
+                        autoOpen: true,
+        maxWidth:500,
+        maxHeight: 200,
+        width: 500,
+        height: 200,
+        modal: true,
+        buttons: {
+            "close": function() {
+                $(this).dialog("close");
+            }
+        },
+        close: function() {
+        },
+		show: {
+                effect: "explode",
+                duration: 1500
+            },
+            hide: {
+                effect: "explode",
+                duration: 1500
+            }
+                    });
 		  $("#turn1").hide();
 	  $("#turn2").hide();
 	  $("#play3").show();
@@ -118,11 +212,11 @@ $('#start').click(function(){
         },
 		show: {
                 effect: "scale",
-                duration: 1500
+                duration: 1000
             },
             hide: {
                 effect: "scale",
-                duration: 1500
+                duration: 1000
             }
     });
    });
